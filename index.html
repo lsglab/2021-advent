@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>LSG Adventskranz</title>
   <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -11,16 +14,18 @@
   <div class="candles">
 
     <input type="checkbox" id="c1">
-    <div class="candle_wrapper candle_1" id="candle1">
-      <label class="candle_base" for="c1">
+    <div class="candle_wrapper" id="candle1">
+      <label class="candle_base" for="c1" id="label1">
         <div class="candle_smoke_1"></div>
         <div class="candle_smoke_2"></div>
         <div class="candle_fire"></div>
         <div class="candle_stick"></div>
-        <div class="candle candle3">
-            <div class="candle_eyes-one candle_eyes"></div>
-            <div class="candle_eyes-two candle_eyes"></div>
-            <div class="candle_mouth"></div>
+        <div class="candle">
+          <div class="candle_eyebrows candle_eyebrow_one"></div>
+          <div class="candle_eyebrows candle_eyebrow_two"></div>
+          <div class="candle_eyes-one candle_eyes"></div>
+          <div class="candle_eyes-two candle_eyes"></div>
+          <div class="candle_mouth"></div>
         </div>
         <div class="sparkles-one"></div>
         <div class="sparkles-two"></div>
@@ -28,13 +33,15 @@
     </div>
 
     <input type="checkbox" id="c2">
-    <div class="candle_wrapper candle_2" id="candle2">
-      <label class="candle_base" for="c2">
+    <div class="candle_wrapper" id="candle2">
+      <label class="candle_base" for="c2" id="label2">
         <div class="candle_smoke_1"></div>
         <div class="candle_smoke_2"></div>
         <div class="candle_fire"></div>
         <div class="candle_stick"></div>
-        <div class="candle candle3">
+        <div class="candle">
+          <div class="candle_eyebrows candle_eyebrow_one"></div>
+          <div class="candle_eyebrows candle_eyebrow_two"></div>
           <div class="candle_eyes-one candle_eyes"></div>
           <div class="candle_eyes-two candle_eyes"></div>
           <div class="candle_mouth"></div>
@@ -45,13 +52,15 @@
     </div>
 
     <input type="checkbox" id="c3">
-    <div class="candle_wrapper candle_3" id="candle3">
-      <label class="candle_base" for="c3">
+    <div class="candle_wrapper" id="candle3">
+      <label class="candle_base" for="c3" id="label3">
         <div class="candle_smoke_1"></div>
         <div class="candle_smoke_2"></div>
         <div class="candle_fire"></div>
         <div class="candle_stick"></div>
-        <div class="candle candle3">
+        <div class="candle">
+          <div class="candle_eyebrows candle_eyebrow_one"></div>
+          <div class="candle_eyebrows candle_eyebrow_two"></div>
           <div class="candle_eyes-one candle_eyes"></div>
           <div class="candle_eyes-two candle_eyes"></div>
           <div class="candle_mouth"></div>
@@ -62,13 +71,15 @@
     </div>
 
     <input type="checkbox" id="c4">
-    <div class="candle_wrapper candle_4" id="candle4">
-      <label class="candle_base" for="c4">
+    <div class="candle_wrapper" id="candle4">
+      <label class="candle_base" for="c4" id="label4">
         <div class="candle_smoke_1"></div>
         <div class="candle_smoke_2"></div>
         <div class="candle_fire"></div>
         <div class="candle_stick"></div>
-        <div class="candle candle3">
+        <div class="candle">
+          <div class="candle_eyebrows candle_eyebrow_one"></div>
+          <div class="candle_eyebrows candle_eyebrow_two"></div>
           <div class="candle_eyes-one candle_eyes"></div>
           <div class="candle_eyes-two candle_eyes"></div>
           <div class="candle_mouth"></div>
@@ -84,6 +95,7 @@
     </div>
   </div>
   <div class="floor"></div>
+  <h4 class="subheader" onclick="textClicked()">Wir vom LSG wünschen allen eine schöne Adventszeit! <h4 class="subheader" id="emoticon" style="margin: 0; padding: 0;display: none">^^/"</h4></h4>
 </div>
 
 <script src="./index.js"></script>

@@ -6,6 +6,12 @@ body {
     --trans-delay: 1.3s;
   }
 
+  .subheader{
+    color: var(--candle-color);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
   .cover {
     width: 100vw;
     height: 100vh;
@@ -96,22 +102,22 @@ body {
     width: 42px;
   }
 
-  .candle_1{
+  #candle1{
     left: 10%;
     height: 80px;
   }
 
-  .candle_2{
+  #candle2{
     left: 30%;
     height: 120px;
   }
 
-  .candle_3{
+  #candle3{
     left: 50%;
     height: 160px;
   }
 
-  .candle_4{
+  #candle4{
     left: 70%;
     height: 180px;
   }
@@ -156,12 +162,40 @@ body {
     /* animation: expand-body 3s infinite linear; */
   }
 
+  .angry_candle .candle{
+    box-shadow: -3px 0px 0px 0px  #bf2727 inset;
+    background: #ec6262;
+  }
+
   .candle_base:hover{
     cursor: pointer;
     transform: scale(1.1,1.1) translateY(-5%);
     transition: .1s ease-in-out;
   }
 
+  .candle_eyebrows{
+    display: none;
+  }
+
+  .angry_candle .candle_eyebrows{
+    display: inline-block;
+    position: absolute;
+    background: var(--candle-color);
+    width: 10px;
+    height: 2px;
+    color: black;
+    top: 10px;
+  }
+
+  .candle_eyebrow_one{
+    transform: rotate(20deg);
+    left: 10%;
+  }
+
+  .candle_eyebrow_two{
+    left: 40%;
+    transform: rotate(-10deg);
+  }
     
   .candle_eyes {
     position: absolute;
@@ -183,7 +217,14 @@ body {
   .candle_eyes-two {
     left: 60%;
   }
-  
+
+  .angry_candle .candle_eyes{
+    width: 7px;
+    height: 7px;
+  }
+
+
+
   .candle_fire {
     position: absolute;
     display: block;
@@ -198,6 +239,15 @@ body {
     transform: translate(-50%, -50%);
     animation: dance-fire 3s infinite linear;
   }
+
+  /*
+  .angry_candle .candle_fire{
+    width: 22px;
+    height: 40px;
+    top: -25px;
+    animation: dance-angry-fire .2s infinite linear;
+  }
+  */
 
   .candle_smoke_1 {
     opacity: 0;
@@ -581,6 +631,21 @@ body {
       background: #FF9800;
     }
   }
+
+  /*@keyframes dance-angry-fire {
+    33.3%{
+      left: 45%;
+    }
+    0%,100%{
+      left: 50%;
+      background: #ffcc00;
+    }
+    66.6% {
+      left: 55%;
+      background: #fff200;
+    }
+  }
+  */
 
   @keyframes blow-out{
     0%,59%{
