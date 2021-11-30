@@ -19,7 +19,6 @@ for(let i = 1; i <= 4; i++){
         candleClicked[i -1]++;
         if(candleClicked[i - 1] === 10){
             document.getElementById(`candle${i}`).classList.add('angry_candle');
-            document.getElementById(`candle${i}`).classList.remove('candle-disabled');
         }
         if(candleClicked[i - 1] === 20) {
             window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_self")
