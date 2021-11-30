@@ -2,8 +2,8 @@ body {
     background-color: #FFF;
     --candle-color: #673C63;
     --shadow-color: #95c6f2;
-    --anim-duration: 2s;
-    --trans-delay: 1.3s;
+    --anim-duration: 2.5s;
+    --trans-delay: 2.1s;
   }
 
   .subheader{
