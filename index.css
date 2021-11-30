@@ -2,6 +2,8 @@ body {
     background-color: #FFF;
     --candle-color: #673C63;
     --shadow-color: #95c6f2;
+    --anim-duration: 2s;
+    --trans-delay: 1.3s;
   }
 
   .cover {
@@ -17,7 +19,7 @@ body {
     background: black;
     opacity: 0;
     transition: .2s  ease-in;
-    transition-delay: 2s;
+    transition-delay: var(--trans-delay);
   }
 
   .vid{
@@ -48,27 +50,31 @@ body {
   }
 
   input[type="checkbox"]:checked + .candle_wrapper .candle_smoke_1{
-    animation: move-left 3s linear;
+    animation: move-left var(--anim-duration) linear;
   }
 
   input[type="checkbox"]:checked + .candle_wrapper .candle_smoke_2{
-    animation: move-top 3s linear;
+    animation: move-top var(--anim-duration) linear;
   }
   
   input[type="checkbox"]:checked + .candle_wrapper .candle_stick{
-    animation: stick-animation 3s linear;
+    animation: stick-animation var(--anim-duration) linear;
   }
 
   input[type="checkbox"]:checked + .candle_wrapper .candle_fire{
-    animation: blow-out 3s linear;
+    animation: blow-out var(--anim-duration) linear;
   }
 
   input[type="checkbox"]:checked + .candle_wrapper + input + .candle_wrapper .candle_base{
-    animation: expand-body 3s linear;
+    animation: expand-body var(--anim-duration) linear;
   }
   
   input[type="checkbox"]:checked + .candle_wrapper + input + .candle_wrapper .candle_mouth{
-    animation: uff 3s linear;
+    animation: uff var(--anim-duration) linear;
+  }
+
+  input[type="checkbox"]:checked + .candle_wrapper + input + .candle_wrapper .candle .candle_eyes{
+    animation: blink-eyes var(--anim-duration) linear;
   }
 
   input[type="checkbox"]:checked ~ .cover{
@@ -159,7 +165,7 @@ body {
     
   .candle_eyes {
     position: absolute;
-    top: 10%;
+    top: 15px;
     width: 5px;
     height: 5px;
     display: inline-block;
@@ -168,7 +174,6 @@ body {
     float: left;
     background: var(--candle-color);
     transform: translate(-80%, 0%);
-    animation: blink-eyes 3s infinite linear;
   }
   
   .candle_eyes-one {
@@ -220,7 +225,7 @@ body {
   .candle_mouth {
     position: absolute;
     left: 40%;
-    top: 20%;
+    top: 33px;
     width: 0px;
     height: 0px;
     border-radius: 20px;
@@ -328,6 +333,8 @@ body {
     transform: translate(-50%, -50%);
     animation: dance-fire 3s infinite linear;
   }
+
+  */
   
   @keyframes blink-eyes {
     0%,35% {
@@ -349,8 +356,6 @@ body {
       transform: translate(-70%, 0%);
     }
   }
-
-  */
 
   @keyframes expand-body {
     0%,20% {
@@ -564,14 +569,14 @@ body {
   */
 
   @keyframes dance-fire {
-    59%,89% {
+    59%,89%,98%,80%,75% {
       left: 49%;
     }
-    90%,0%,7%,15%,23%,31%,39%,47%,55% {
+    90%,0%,7%,15%,23%,31%,39%,47%,55%,64%,82%,86%{
       left: 50%;
       background: #FFC107;
     }
-    94%,3%,11%,19%,27%,35%,43%,51%,58% {
+    94%,3%,11%,19%,27%,35%,43%,51%,58%,70%,77%,84% {
       left: 52%;
       background: #FF9800;
     }
