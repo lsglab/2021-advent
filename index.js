@@ -9,6 +9,16 @@ const dates = [firstA, secondA, thirdA, fourthA];
 for(let i = 0; i < dates.length; i++){
     if(today.getTime() <= dates[i].getTime()){
         document.getElementById(`label${i + 1}`).classList.add('candle-disabled');
+    } else {
+        document.getElementById(`candle${i + 1}`).addEventListener("click", () => {
+            const v = i;
+            const video = document.getElementsByClassName("vid")[0];
+            video.classList.add('vid-visible');
+            const sou = document.getElementById("source");
+            sou.setAttribute('src','./vids/'+v+'.mp4');
+            video.load();
+            video.play();
+        });
     }
 }
 
@@ -21,7 +31,7 @@ for(let i = 1; i <= 4; i++){
             document.getElementById(`candle${i}`).classList.add('angry_candle');
         }
         if(candleClicked[i - 1] === 20) {
-            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_self")
+            window.open(`https://www.youtube.com/watch?v=dQw4w9WgXcQ`, "_self")
         }
     });
 }
@@ -30,7 +40,7 @@ clickedCount = 0;
 
 function textClicked(){
     clickedCount++;
-    if(clickedCount == 5){
+    if(clickedCount === 5){
         document.getElementById("emoticon").style.display = "block";
     }
 }

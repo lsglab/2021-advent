@@ -41,6 +41,10 @@ body {
   .vid{
     display: none;
   }
+
+  .vid-visible{
+    display: block;
+  }
   
   .wrapper {
     display: flex;
