@@ -11,11 +11,12 @@ for(let i = 0; i < dates.length; i++){
         document.getElementById(`label${i + 1}`).classList.add('candle-disabled');
     } else {
         document.getElementById(`candle${i + 1}`).addEventListener("click", () => {
-            const v = i;
+            const vUrl = `./vids/${i}.mp4`;
             const video = document.getElementsByClassName("vid")[0];
+            video.setAttribute('src',vUrl);
             video.classList.add('vid-visible');
             const sou = document.getElementById("source");
-            sou.setAttribute('src','./vids/'+v+'.mp4');
+            sou.setAttribute('src',vUrl);
             video.load();
             video.play();
         });
@@ -29,9 +30,6 @@ for(let i = 1; i <= 4; i++){
         candleClicked[i -1]++;
         if(candleClicked[i - 1] === 10){
             document.getElementById(`candle${i}`).classList.add('angry_candle');
-        }
-        if(candleClicked[i - 1] === 20) {
-            window.open(`https://www.youtube.com/watch?v=dQw4w9WgXcQ`, "_self")
         }
     });
 }
